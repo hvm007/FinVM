@@ -24,32 +24,103 @@ Data Science & Tech Hobbyists: Anyone interested in seeing a real-world applicat
 ## Features
 
 🤖 AI & Predictive Analysis
-Ensemble-Based Predictions: Utilizes a powerful Ensemble Learning model, combining RandomForest and GradientBoosting regressors to forecast 10-day stock returns.
+    Ensemble-Based Predictions: Utilizes a powerful Ensemble Learning model, combining RandomForest and GradientBoosting regressors to forecast 10-day stock returns.
 
-Rich Feature Engineering: Automatically computes over 7 technical and sentiment-based features for each stock, including Momentum, RSI, Volatility, and a custom news sentiment score.
+    Rich Feature Engineering: Automatically computes over 7 technical and sentiment-based features for each stock, including Momentum, RSI, Volatility, and a custom news sentiment score.
 
-Transparent AI: Provides Feature Importance charts to show what data drives the AI's decisions, along with a unique AI Confidence Score for each prediction.
+    Transparent AI: Provides Feature Importance charts to show what data drives the AI's decisions, along with a unique AI Confidence Score for each prediction.
 
-Automated Risk Assessment: Calculates and assigns a risk level (Low, Medium, High) to each stock in your portfolio.
+    Automated Risk Assessment: Calculates and assigns a risk level (Low, Medium, High) to each stock in your portfolio.
 
 📊 Market & Data Insights
-Live Market Heatmap: Offers a real-time, at-a-glance view of the NIFTY 50's performance.
+    Live Market Heatmap: Offers a real-time, at-a-glance view of the NIFTY 50's performance.
 
-Unsupervised Stock Clustering: Employs K-Means Clustering to discover hidden market structures by grouping stocks with similar financial DNA.
+    Unsupervised Stock Clustering: Employs K-Means Clustering to discover hidden market structures by grouping stocks with similar financial DNA.
 
-News Sentiment Engine: Scrapes and analyzes financial news to provide a live market sentiment gauge.
+    News Sentiment Engine: Scrapes and analyzes financial news to provide a live market sentiment gauge.
 
 📈 Portfolio & Trading Tools
-Personal Portfolio Manager: Track your real-life stock holdings with detailed value and profit/loss analysis.
+    Personal Portfolio Manager: Track your real-life stock holdings with detailed value and profit/loss analysis.
 
-Gamified Trading Simulator: A risk-free sandbox with a leaderboard, achievements, and a daily prediction challenge to hone your trading skills on live data.
+    Gamified Trading Simulator: A risk-free sandbox with a leaderboard, achievements, and a daily prediction challenge to hone your trading skills on live data.
 
-PDF Reporting: Generates report on portfolio of user.
+    PDF Reporting: Generates report on portfolio of user.
 
 ⚙️ Platform & User Experience
-Secure User Authentication: Full user login and sign-up system powered by a Supabase backend.
+    Secure User Authentication: Full user login and sign-up system powered by a Supabase backend.
 
-Interactive Dashboard: A clean, multi-page, and responsive interface built with Streamlit and Plotly.
+    Interactive Dashboard: A clean, multi-page, and responsive interface built with Streamlit and Plotly.
+## Page wise Features
+
+
+🏠 Main App & Home Page (app.py)
+    Secure User Authentication: A complete login/signup system built with Supabase that gates access to the entire application.
+
+    Dynamic Multi-Page UI: A structured multi-page application with a persistent, custom-built sidebar for easy navigation.
+
+    Personalized Welcome Dashboard: The home page displays a user-specific summary, including:
+
+    Live Portfolio Value: A real-time calculation of the user's managed portfolio.
+
+    Game Balance: The user's current virtual currency in the trading game.
+
+    AI Confidence Score: A live metric reflecting the AI's current predictive confidence.
+
+    AI-Powered Alerts: A personalized alert system on the home page that warns users about high-risk holdings in their portfolio and highlights new market opportunities.
+
+    Live NIFTY 50 Heatmap: A visualization of the entire NIFTY 50 index, updated in real-time to show daily performance at a glance.
+
+    Recent Activity Feed: A personalized feed that combines the user's latest game trades and unlocked achievements.
+
+🤖 AI Dashboard (1_Dashboard.py)
+    Top-Line AI Metrics: A dashboard row with key performance indicators: AI Confidence, Market Sentiment, AI Signals Generated, and historical Prediction Accuracy.
+
+    Live Prediction Table: An interactive table of NIFTY 50 stocks showing current price, daily change, the AI's 10-day predicted return, the confidence score for that prediction, and a calculated risk level.
+
+    Interactive Prediction Chart: A core feature allowing users to select any stock and view an interactive Plotly chart comparing its historical price against the AI's predicted prices.
+
+    Model Performance Display: The dashboard can display the underlying ML model's performance metrics, RMSE and R² Score, for any selected stock.
+
+    Transparent AI: For any stock, the dashboard can generate a Feature Importance chart, showing exactly which factors (e.g., Momentum, Volatility, Sentiment) the AI used to make its prediction.
+
+    Top 5 AI Picks: Dedicated cards for the Top 5 Bullish and Bearish stock picks from the AI, complete with visual confidence meters.
+
+💼 Portfolio Manager (2_Portfolio.py)
+    Real Portfolio Tracking: Functionality for users to add, edit, and remove their real-life stock holdings.
+
+    In-Depth Financial Metrics: The system automatically calculates and displays total portfolio value, total profit/loss, and percentage return.
+
+    Portfolio Allocation Pie Chart: A visualization showing the weight of each stock in the user's portfolio.
+
+    AI-Powered Suggestions: An "AI Portfolio Suggestions" section that provides specific buy/sell recommendations based on the user's current holdings and the AI's latest predictions.
+
+    Tabular Risk Analysis: A table that breaks down the user's portfolio, showing the calculated risk level for each individual holding.
+
+    Watchlist & Export: A separate watchlist for tracking stocks and a feature to export the entire portfolio to a CSV file.
+
+🎮 Virtual Trading Game (3_Trading_Game.py)
+    Risk-Free Trading Simulator: A complete trading game with an initial virtual balance of ₹1,00,000.
+
+    Comprehensive Game Statistics: A dashboard tracking the user's win rate, total P&L, profitable trades, and current/max winning streaks.
+
+    Achievement & Badge System: Users can unlock achievements (e.g., 'First Trade', 'Hot Streak', 'Portfolio Builder') for completing certain milestones.
+
+    Live Leaderboard: A ranked leaderboard of all players based on their total virtual portfolio value, showing top traders' win rates and returns.
+
+    Daily Prediction Challenge: An interactive mini-game where users predict the next day's direction for three randomly selected stocks.
+
+    Full Transaction History: A log of every buy and sell transaction made within the game.
+
+🔍 Market Insights (4_Market_Insights.py)
+    Unsupervised Stock Clustering: Uses the K-Means algorithm to analyze all NIFTY 50 stocks and group them into clusters based on their financial metrics, presented in an interactive scatter plot.
+
+    Sector Performance Analysis: A bar chart that visualizes the performance of different market sectors (e.g., Banking, IT, Auto).
+
+    Factor Correlation Heatmap: A matrix that shows the correlation between the various financial factors (Momentum, Volatility, etc.), revealing deeper relationships in the market data.
+
+    Market Health Score: A unique, calculated score that combines multiple factors (sentiment, breadth, volatility) to provide a single metric for the overall health of the market.
+
+    News Sentiment Word Cloud: A visual representation of the most common keywords appearing in recent financial news, indicating market focus and sentiment.
 ## CORE
 The core of FinVM is a sophisticated data pipeline that transforms raw market data into actionable, AI-driven insights. It is architected as a multi-stage process, involving data collection, feature engineering, and a hybrid machine learning approach that leverages both supervised and unsupervised learning.
 
