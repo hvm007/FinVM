@@ -124,7 +124,7 @@ This page uses ML for discovery and analysis rather than direct prediction.
 | ------------------------- | -------------------------------------------------------------------------------------------------------- |
 | **Frontend** | `Streamlit`                                                                                              |
 | **Backend & Core** | `Python`, `Pandas`, `NumPy`                                                                              |
-| **Database & Auth** | 'Supabase' for Authentication & Managed 'PostgreSQL' Database                                               |
+| **Database & Auth** | `Supabase` for Authentication & Managed PostgreSQL Database                                               |
 | **Machine Learning** | `Scikit-learn`, `VaderSentiment`, `TextBlob`                                                             |
 | **Data Fetching** | `yfinance`, `Requests`, `BeautifulSoup4`, `Trafilatura`                                                  |
 | **Data Visualization** | `Plotly`                                                                                                 |
