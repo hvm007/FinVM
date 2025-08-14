@@ -124,13 +124,13 @@ This page uses ML for discovery and analysis rather than direct prediction.
 | ------------------------- | -------------------------------------------------------------------------------------------------------- |
 | **Frontend** | `Streamlit`                                                                                              |
 | **Backend & Core** | `Python`, `Pandas`, `NumPy`                                                                              |
-| **Database & Auth** | `Supabase` (PostgreSQL)                                                                                  |
+| **Database & Auth** | 'Supabase' for Authentication & Managed 'PostgreSQL' Database                                               |
 | **Machine Learning** | `Scikit-learn`, `VaderSentiment`, `TextBlob`                                                             |
 | **Data Fetching** | `yfinance`, `Requests`, `BeautifulSoup4`, `Trafilatura`                                                  |
 | **Data Visualization** | `Plotly`                                                                                                 |
 ---
 
-## 🧠 The AI & Machine Learning Pipeline (Detailed)
+## 🧠 The AI & Machine Learning Pipeline
 
 The core of FinVM is a sophisticated data pipeline that transforms raw market data into actionable, AI-driven insights.
 
